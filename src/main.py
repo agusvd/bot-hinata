@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 from db import update_profile, insert_profile, get_profile
@@ -7,7 +8,7 @@ from exercises.A1 import generate_exercise
 
 # configuracion del bot
 prefix = "!"
-token = os.environ.get('discord_token')
+token = os.getenv('discord_token')
 
 # Definir los intentos necesarios para el bot
 intents = discord.Intents.default()
